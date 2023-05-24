@@ -7,5 +7,6 @@ const viz = new TableauViz();
 
 viz.src = "https://public.tableau.com/views/MatriculacionesdeVehiculosenEspaa/MatriculacionesdeVehculosenEspaa";
 viz.toolbar = "hidden";
+viz.hideTabs = true;
 
 document.getElementById("tableauViz").appendChild(viz);
