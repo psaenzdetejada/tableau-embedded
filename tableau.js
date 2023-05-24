@@ -5,7 +5,7 @@ import { TableauViz } from "https://public.tableau.com/javascripts/api/tableau.e
 // https://help.tableau.com/current/api/embedding_api/en-us/docs/embedding_api_configure.html
 const viz = new TableauViz();
 
-viz.src = "https://public.tableau.com/views/RegionalSampleWorkbook/Storms";
+viz.src = "https://public.tableau.com/views/MatriculacionesdeVehiculosenEspaa/MatriculacionesdeVehculosenEspaa";
 viz.toolbar = "hidden";
 
 document.getElementById("tableauViz").appendChild(viz);
