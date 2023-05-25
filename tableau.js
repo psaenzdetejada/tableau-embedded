@@ -10,3 +10,12 @@ viz.toolbar = "hidden";
 viz.hideTabs = true;
 
 document.getElementById("tableauViz").appendChild(viz);
+
+function vehicleFilter(type) {
+    var sheet = viz.getWorkbook().getActiveSheet();
+    if (type === "") {
+        sheet.clearFilterAsync("COD_TIPO");
+    } else {
+        sheet.applyFilterAsync("COD_TIPO", type, tableau.FilterUpdateType.REPLACE);
+    }
+}
