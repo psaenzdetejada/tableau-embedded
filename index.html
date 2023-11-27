@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Basic Embedding via JS Initialization</title>
+    <title>Filter</title>
 
-    <script type="module" src="./tableau.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/current/api/embedding_api/en-us/css/main.css">
+    <link rel="stylesheet" href="/current/api/embedding_api/en-us/css/github-highlight.css">
+
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+    <script type="module" src="\interactive.js"></script>
+
 
 </head>
 
 <body>
-    <select id="vehicleType" onchange="vehicleFilter(value);">
-        <option value="">All</option>
-        <option value="2013">Turismo</option>
-        <option value="2014">Ciclomotor de 2 ruedas</option>
-    </select>
-    <center>
-        <div  style="width:1600px; height:900px;">
-            <!-- Placeholder for the Tableau visualization. -->
-            <div id="tableauViz"></div>
-        </div>
-    </center>
+<div class="viz">
+    <tableau-viz id="tableauViz2" src="https://eu-west-1a.online.tableau.com/t/semdemosite/views/CustomerRevenue/Overview/0b72ee1d-3c83-473d-b820-9354f447520d/93c8d2c9-3e99-4b24-8dd7-38a11a8441bd" toolbar="hidden" hide-tabs="true" height="900" width="1600">
+</tableau-viz>
+    <button id="filterButton" class="btn btn-primary">Argentina</button>
+    <button id="clearButton" class="btn btn-primary">Clear Filter</button>
+    <button id="undoButton" class="btn btn-primary">Undo</button></div></html>
+
+
 </body>
-
 </html>
-
-
