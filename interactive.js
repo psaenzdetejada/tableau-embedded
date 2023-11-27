@@ -6,8 +6,8 @@ function filterState() {
     let viz = document.getElementById("tableauViz2");
     console.log( viz);
     let sheet = viz.workbook.activeSheet;
-    const saleMap = sheet.worksheets.find((ws) => ws.name == "MapaporPais");
-    saleMap.applyFilterAsync("Country", ["Argentina"], FilterUpdateType.Replace);
+    const saleMap = sheet.worksheets.find((ws) => ws.name == "Top marcas");
+    saleMap.applyFilterAsync("COD_TIPO", ["Ambulancia"], FilterUpdateType.Replace);
 };
 
 
